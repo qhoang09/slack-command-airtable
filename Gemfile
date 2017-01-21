@@ -39,6 +39,7 @@ gem 'jbuilder', '~> 2.5'
 
 # GEM Airtable
 gem 'airtable'
+gem "haml"
  
 
 group :development, :test do

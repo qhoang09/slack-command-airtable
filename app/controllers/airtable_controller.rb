@@ -3,6 +3,6 @@ class AirtableController < ApplicationController
   		@client = Airtable::Client.new("keysLF5bncTFH50wm")
 		@table = @client.table("app3JvjS2LKzXALwY", "Helpees")
 		@records = @table.records
-		@first_record = @records.first
+
   end
 end
