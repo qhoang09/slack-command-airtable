@@ -39,6 +39,8 @@ gem 'jbuilder', '~> 2.5'
 
 # GEM Airtable
 gem 'airtable'
+# https://github.com/Airtable/airtable-ruby
+
 gem "haml"
  
 

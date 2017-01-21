@@ -1,14 +1,33 @@
 %h1 Airtable#index
-%p Find me in app/views/airtable/index.html.erb
+
+%strong List of companies
+%br
+%br
+-@companies_records.each do |record|
+	=record.name 
+	%br
+	%a{:href => record.linkedin} Linkedin
+	%br
+	%br
+	
+
+
+%strong List of helpees
 
 %br
 %br
--@records.each do |record|
+-@helpees_records.each do |record|
 	=record.name 
 	%br
-	=record.linkedin
+	%a{:href => record.linkedin} Linkedin
 	%br
-	=record.notes 
+	-if record.notes.present?
+		=record.notes 
+		%br
+	-if record.company.present?
+		=@companies_table.find(record.company.first).name
 	%br
+
+
 	%br
 
