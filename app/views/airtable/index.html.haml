@@ -13,16 +13,20 @@
 
 
 %strong List of helpees
+=@helpees_records.count
+%br
+%br
 
-%br
-%br
 -@helpees_records.each do |record|
 	=record.name 
 	%br
 	%a{:href => record.linkedin} Linkedin
 	%br
-	-if record.notes.present?
-		=record.notes 
+	-if record.strenghts.present?
+		=record.strenghts 
+		%br
+	-if record.weaknesses.present?
+		=record.weaknesses 
 		%br
 	-if record.company.present?
 		=@companies_table.find(record.company.first).name
