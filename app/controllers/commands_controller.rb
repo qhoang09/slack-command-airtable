@@ -1,7 +1,8 @@
 class CommandsController < ApplicationController
+	protect_from_forgery
+	
 	def create
-#    return render json: {}, status: 403 unless valid_slack_token?
- #   CommandWorker.perform_async(command_params.to_h)
+
   	render json: "hello", status: :ok
   end
   
