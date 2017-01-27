@@ -8,10 +8,10 @@ class CommandsController < ApplicationController
 		when '/testhello'
 			result = {
 				text: "message coucou",
-				attachments: {
+				attachments: [{
 					color: "#AAAAA",
 					text: "message attachement"
-				}
+				}]
 			}
 			render json: result, status: :ok
 		when '/helpeecount'
