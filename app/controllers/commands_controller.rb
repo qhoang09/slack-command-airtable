@@ -6,7 +6,14 @@ class CommandsController < ApplicationController
 		command_parameters = params.fetch('text')
 		case command
 		when '/testhello'
-			render json:'hello', status: :ok
+			result = {
+				text: "message coucou",
+				attachments: {
+					color: "#AAAAA",
+					text: "message attachement"
+				}
+			}
+			render json: result, status: :ok
 		when '/helpeecount'
 
 
