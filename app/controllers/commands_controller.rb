@@ -28,7 +28,7 @@ class CommandsController < ApplicationController
 			      ],
 			      "pretext": "Here is some information about #{current_helpor.name}",
 			      "attachment_type": "default",
-			      "author_subname": "#{current_helpor.Helpor_company}",
+			      "author_subname": "#{current_helpor.HelporCompany}",
 			      "title": "Bio",
 			      "fields": [
 			        {
