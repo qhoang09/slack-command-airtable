@@ -1,37 +1,18 @@
 %h1 Airtable#index
 
-%strong List of companies
-%br
-%br
--@companies_records.each do |record|
-	=record.name 
-	%br
-	%a{:href => record.linkedin} Linkedin
-	%br
-	%br
-	
+
 
 
 %strong List of helpees
-=@helpees_records.count
+=@helpors_records.count
 %br
 %br
 
--@helpees_records.each do |record|
+-@helpors_records.each do |record|
 	=record.name 
 	%br
 	%a{:href => record.linkedin} Linkedin
 	%br
-	-if record.strenghts.present?
-		=record.strenghts 
-		%br
-	-if record.weaknesses.present?
-		=record.weaknesses 
-		%br
-	-if record.company.present?
-		=@companies_table.find(record.company.first).name
-	%br
-
 
 	%br
 

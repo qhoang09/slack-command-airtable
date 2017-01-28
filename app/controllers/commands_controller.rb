@@ -19,8 +19,7 @@ class CommandsController < ApplicationController
 			}
 			render json: result, status: :ok
 		when '/count'
-			render text: "There are #{helpees_table.records.count} helpees", status: :ok
-			render text: "There are #{helpors_table.records.count} helpors", status: :ok
+			render text: "There are #{helpees_table.records.count} helpees and #{helpors_table.records.count} helpors", status: :ok
 		end
 
   end
