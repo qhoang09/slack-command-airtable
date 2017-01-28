@@ -8,6 +8,8 @@ class CommandsController < ApplicationController
 		helpees_table = @client.table("app3JvjS2LKzXALwY", "Helpees")
 		helpors_table = @client.table("app3JvjS2LKzXALwY","Helpors")
 
+		@current_helpor = helpors_table.records.first
+
 		case command
 		when '/testhello'
 			result = {
@@ -24,9 +26,9 @@ class CommandsController < ApplicationController
 			        "pretext",
 			        "fields"
 			      ],
-			      "pretext": "Here is some information about #{helpors_table.records.first.name}",
+			      "pretext": "Here is some information about #{current_helpor.name}",
 			      "attachment_type": "default",
-			      "author_subname": "Google",
+			      "author_subname": "#{current_helpor.Helpor_company}",
 			      "title": "Bio",
 			      "fields": [
 			        {
