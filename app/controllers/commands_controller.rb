@@ -24,7 +24,7 @@ class CommandsController < ApplicationController
 			        "pretext",
 			        "fields"
 			      ],
-			      "pretext": "Here is some information about Luc Vincent",
+			      "pretext": "Here is some information about #{helpors_table.records.first.name}",
 			      "attachment_type": "default",
 			      "author_subname": "Google",
 			      "title": "Bio",
